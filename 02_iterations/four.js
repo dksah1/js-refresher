@@ -86,6 +86,10 @@ let books = [
       genre: "Fantasy"
     }
   ];
-  let userBooks = books.filter((bk)=> bk.genre === 'Fantasy' )
- userBooks = books.filter((bk)=> bk.publicationYear >="1990")
-  console.log(userBooks);
+//   let userBooks = books.filter((bk)=> bk.genre === 'Fantasy' )
+//  userBooks = books.filter((bk)=> bk.publicationYear >="1990")
+let userBooks = books.filter((bk)=> bk.genre === 'Fantasy')
+ userBooks = books.filter((bk)=>{
+  return bk.publicationYear >=1800 && bk.genre ==="Fantasy"
+ })
+console.log(userBooks);
